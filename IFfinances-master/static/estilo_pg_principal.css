@@ -1,0 +1,80 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+html,
+body {
+  font-family: "arial";
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#318bff, #87ceeb);
+}
+
+ul {
+  list-style: none;
+}
+
+.bi-list {
+  font-size: 40px;
+  margin: 20px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+nav {
+  background-color: #252525;
+  width: 350px;
+  left: -350px;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+input[type="checkbox"]:checked~nav {
+  /*Quando o checkbox for acionado, ele vai fazer um evento no conteudo, no elemento nav*/
+  transform: translateX(350px);
+}
+
+ul {
+  top: 70px;
+  position: absolute;
+  width: 100%;
+}
+
+a {
+  display: block;
+  padding: 20px 5px;
+  color: #fff;
+}
+
+a:hover {
+  background-color: rgb(12, 97, 33);
+}
+
+label {
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+  /*faz com que o elemento fique na frente do outro*/
+}
+.escrita_cancelar{
+  text-decoration: none;
+  color: white;
+  
+}
+.botaum_incluir{
+  background-color: #228b22;
+  margin-top: 10px;
+}
+.escrita_incluir{
+  text-decoration: none;
+  color: white;
+}

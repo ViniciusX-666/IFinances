@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" />
+  <script src="{{ url_for('static', filename='jquery-3.6.0.js') }}"></script>
+  <script src="{{ url_for('static', filename='teste.js') }}"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='jquery-3.6.0.js') }}"></script>
+  <script src="{{ url_for('static', filename='jquery.validate.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='localization/messages_pt_BR.js') }}"></script>
+  <script src="{{ url_for('static', filename='teste.js') }}"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="msg_nao_logado">
+      <div class="mensagem_erro">
+      {% with successo = get_flashed_messages() %} {% if successo %}
+      <ul id="messages" class="escrita_popup">
+        {% for message in successo %}
+        <li class="alert alert-success alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% endwith %}
+      </div>
+      <h3>Faça seu login</h3>
+    </div>
+
+
+    <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+
+    <p id="profile-name" class="profile-name-card"></p>
+
+    <form class="form-signin" method="post" action="/autenticar" id="login">
+      <input type="hidden" name="proxima" value="{{proxima}}" />
+      <span id="reauth-email" class="reauth-email"></span>
+      <input type="text" id="inputEmail" name="usuario" class="form-control" placeholder="Digite seu email" required
+        autofocus autocomplete="off"/>
+      <input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required />
+      <button data-bs-toggle="modal" class="btn" type="submit" id="botao">
+        Entrar
+      </button>
+    </form>      
+
+    <div class="cadastro">
+      <a href="{{url_for('cadastro')}}" id="sombra3">Não possuo cadastro</a>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='jquery-3.6.0.js') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='teste.js') }}" />
+</body>
+
+</html>

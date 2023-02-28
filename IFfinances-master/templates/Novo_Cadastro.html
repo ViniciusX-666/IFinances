@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Não possuo cadastro</title>
+
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='novo-cadastro.css') }}" />
+    <script src="{{ url_for('static', filename='jquery-3.6.0.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.validate.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='localization/messages_pt_BR.js') }}"></script>
+    <script src="{{ url_for('static', filename='teste.js') }}"></script>
+</head>
+
+<body>
+  <div class="container" id="form-container">
+      <div class="form-container">
+        
+        <h3>Faça seu cadastro</h3>
+
+
+        <form class="form" method="POST" action="/salvarUsuario" name="usuarioNovo" id="usuarioNovo">
+          <input type="hidden" name="proxima2" value="{{proxima2}}" />
+          <span id="reauth-email" class="reauth-email"></span>
+
+
+          <div class="name">
+            <label for="name" class="form-label"></label>
+            <input type="text" id="name" name="name" autocomplete="off" class="form-control" placeholder="Digite seu nome"/>
+          </div>
+
+
+          <div class="sobrenome">
+            <label for="lastname" class="form-label"></label>
+            <input type="text" id="lastname" name="lastname" autocomplete="off" class="form-control" placeholder="Digite seu sobrenome" />
+          </div>
+
+
+          <div class="email">
+            <label for="email" class="form-label"></label>
+            <input type="email" class="form-control" id="email" autocomplete="off" name="email" placeholder="Digite seu email" />
+          </div>
+
+
+          <div class="senha">
+            <label for="password" class="form-label"></label>
+            <input type="password" class="form-control" id="password" autocomplete="off" name="password" placeholder="Digite sua senha" />
+          </div>
+
+
+          <button class="btn" type="submit">
+            Cadastrar
+          </button>
+
+
+          <a class="sombra3" href="{{url_for('login')}}" id="sombra3">Eu já tenho uma conta</a>
+        </form>
+      </div>
+  </div>
+</body>
+</html>
+
+
+
+

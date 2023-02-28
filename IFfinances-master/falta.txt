@@ -1,0 +1,11 @@
+- arrumar parte da minha conta ( editar e excluir conta )
+- arrumar contas a pagar( vizualizar todas as contas a pagar, botão para pagar conta, listar na pagina principal )
+- contas a receber (vizualizar todas as contas a receber, botão para receber conta )
+- melhorar parte de poupança 
+- ajustar bugs do bootstrap
+
+
+
+
+
+ALTER TABLE renda ADD CONSTRAINT cliente_idcliente FOREIGN KEY (idcliente) REFERENCES cliente (idcliente);

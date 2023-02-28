@@ -1,0 +1,318 @@
+body,
+html {
+  height: 100%;
+  font-family: "arial";
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#318bff, #87ceeb);
+}
+
+.card-container.card {
+  top: 100px;
+  max-width: 400px;
+  padding: 40px 40px;
+}
+
+.btn {
+  font-weight: 700;
+  height: 36px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.card {
+  background-color: red;
+  /* just in case there no content*/
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  /* shadows and rounded borders */
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  margin: 1rem;
+  font-weight: bold;
+}
+
+.profile-img-card {
+  top: 10px;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0 0;
+  min-height: 1em;
+}
+
+.reauth-email {
+  display: block;
+  color: #404040;
+  line-height: 2;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+  direction: ltr;
+  height: 44px;
+  font-size: 16px;
+}
+
+.form-signin input[type="email"],
+.form-signin input[type="password"],
+.form-signin input[type="text"],
+.form-signin button,
+.form-signin .form-control input[type="text"],
+#form-container .form-control {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 1;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+  border-color: rgb(104, 145, 162);
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgb(104, 145, 162);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+  /*background-color: #4d90fe; */
+  background-color: rgb(104, 145, 162);
+  /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+  padding: 0px;
+  font-weight: 700;
+  font-size: 14px;
+  height: 36px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 5px;
+  border: none;
+  -o-transition: all 0.218s;
+  -moz-transition: all 0.218s;
+  -webkit-transition: all 0.218s;
+  transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+  background-color: rgb(12, 97, 33);
+}
+
+.forgot-password {
+  color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus {
+  color: rgb(12, 97, 33);
+}
+
+#link1 {
+  color: rgb(104, 145, 162);
+  position: relative;
+}
+
+/*--------------------------------*/
+
+/*página principal*/
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+.bi-list {
+  font-size: 40px;
+  margin: 20px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+nav {
+  background-color: rgb(88, 169, 246);
+  width: 350px;
+  /* left: -350px;*/
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+input[type="checkbox"]:checked~nav {
+  /*Quando o checkbox for acionado, ele vai fazer um evento no conteudo, no elemento nav*/
+  transform: translateX(350px);
+}
+
+ul {
+  top: 70px;
+  position: absolute;
+  width: 100%;
+}
+
+a {
+  display: block;
+  padding: 20px 5px;
+  color: #fff;
+}
+
+a:hover {
+  background-color: #fff;
+}
+
+label {
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+  
+}
+
+.container {
+  position: absolute;
+  right: 0px;
+  width: 77vw;
+  height: 100vh;
+}
+
+.container .header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 77vw;
+  height: 10vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 2);
+}
+
+.container .header .nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .header .nav .search {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .header .nav .search input[type="text"] {
+  border: none;
+  background: #f1f1f1;
+  padding: 10px;
+  width: 50%;
+}
+
+.container .header .nav .search button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .header .nav .search button .bi-search {
+  font-size: 30px;
+  width: 30px;
+  height: 50px;
+}
+
+.container .content {
+  position: relative;
+  margin-top: 20vh;
+  min-height: 90vh;
+}
+
+.container .content .cards {
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container .content .cards .card {
+  width: 250px;
+  height: 300px;
+  background: white;
+  margin: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .content .cards .card .icon-design img {
+  width: 60px;
+  height: 60px;
+}
+
+.container .content .content-ii {
+  min-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.escrita_cancelar{
+  text-decoration: none;
+  color: white;
+  
+}
+.botaum_incluir{
+  background-color: #228b22;
+  margin-top: 10px;
+}
+.escrita_incluir{
+  text-decoration: none;
+  color: white;
+}
